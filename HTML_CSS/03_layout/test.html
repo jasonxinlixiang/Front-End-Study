@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>选中当前菜单后高亮</title>
+<style type="text/css">
+.parentmenu {
+  margin: 1px 0; 
+  width: 100%;
+  height: 21px; 
+  font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+}
+.parentmenu ul {
+  padding: 0px; 
+  display: block; 
+  margin: 0px; 
+  list-style-type: none; 
+  height: 21px; 
+  background-color: #0b5897;
+  color: #ffffff; 
+}
+.parentmenu li {
+  border-right:  #ffffff 1px solid; 
+  display: block; 
+  float: left; 
+  height: 21px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+}
+.parentmenu li a {
+  padding:1px 15px 0; 
+  display:  block; 
+  font-weight: none; 
+  color: #ffffff; 
+  line-height: 20px; 
+  text-decoration: none;
+}
+.parentmenu li a:hover {
+  color:#562505; 
+  background-color: white; 
+  text-decoration: none;
+}
+.parentmenu li .current{
+ color:#562505; 
+  background-color: white; 
+  text-decoration: none;
+}
+.parentmenu li#date{
+ color:#ffffff;
+ padding:2px 15px 0; 
+}
+
+</style>
+<script language="javascript" type="text/javascript">
+function change_bg(obj){
+var a=document.getElementsByClassName("parentmenu")[0].getElementsByTagName("a");
+for(var i=0;i<a.length;i++){a[i].className="";}
+obj.className="current";
+}
+</script>
+</head>
+<body>
+<div class="parentmenu">
+ <ul>
+ <li><A href="#" class="current" onclick="change_bg(this)">脚本首页</a></li>
+ <li><A href="#" onclick="change_bg(this)">网页特效</A> </LI>
+ <li><a href="#" onclick="change_bg(this)">精品脚本</a> </LI>
+ <li><A href="#" onclick="change_bg(this)">ASP代码</A> </LI>
+ <li><A href="#" onclick="change_bg(this)">PHP代码</A> </LI>
+ <li><A href="#" onclick="change_bg(this)">JSP代码</A> </LI>
+ <li><A href="#" onclick="change_bg(this)">脚本资源</A> </LI>
+ <li><A href="#" onclick="change_bg(this)">软件下载</A> </LI>
+ </ul>
+</div>
+</body>
+</html>
