@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        /*
+            break关键字可以用来退出switch或循环语句
+                不能在if语句中使用break和continue
+        */
+
+        // for(var i=0; i<5; i++){
+        //     console.log(i);
+
+        //     if(i==2){
+        //         break;
+        //     }
+        // }
+
+
+        /*
+            可以为循环语句创建一个label，来标示当前的循环
+            label:循环语句
+            使用break语句时，可以在break后跟着一个label
+            这样break将会结束指定的循环，而不是最近的
+        */
+        outer:
+        for(var i=0; i<5; i++){
+            console.log("外层循环" + i);
+            for(var j=0; j<5; j++){
+                break outer;
+                console.log("内层循环1"+j);
+            }
+        }
+
+        for(var i=0; i<5; i++){
+            console.log(i);
+            if(i==2){
+               // break;
+               continue;
+            }
+
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
