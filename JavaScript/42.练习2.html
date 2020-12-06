@@ -23,7 +23,7 @@
 
             //判断i是否是质数
             //获取到2-i之间所有的数
-            for(var j=2; j<i; j++){
+            for(var j=2; j<=Math.sqrt(i); j++){
 
                 //判断i是否能被j整除
                 if(i%j == 0){
@@ -48,6 +48,9 @@
         //终止计时器
         //console.timeEnd()用来停止一个计时器，需要一个计时器的名字作为参数
         console.timeEnd("test");
+
+		//可以通过Math.sqrt()对一个数开方
+		//Math.sqrt()
     </script>
 </head>
 
