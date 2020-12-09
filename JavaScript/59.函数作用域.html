@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            函数作用域
+                - 调用函数时创建函数作用域，函数执行完毕以后，函数作用域销毁
+                - 每调用一次函数就会创建一个新的函数作用域，他们之间是互相独立的
+                - 在函数作用域中可以访问到全局作用域的变量,
+                    在全局作用域中无法访问到函数作用域的变量
+                - 当在函数作用域中操作一个变量时，它会先在自身作用域中寻找，如果由就直接使用
+                    如果没有则向上一级作用域寻找
+        */
+
+        //创建一个变量
+        var a = 10;
+
+        function fun(){
+
+           // var a = "我是函数中的变量a";
+            var b = 20;
+
+           // console.log("a=" + a);
+
+           function fun2(){
+               console.log("a=" + a);
+           }
+        }
+
+        fun();
+
+        console.log("b=" + b); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
