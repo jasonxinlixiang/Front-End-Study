@@ -58,6 +58,24 @@
        var obj2 = createPerson("猪八戒",28,"男");
        var obj3 = createPerson("白骨精",18,"女");
        var obj3 = createPerson("孙悟空",18,"男");
+
+       function createDog(name,age){
+           var obj = new Object();
+           obj.name = name;
+           obj.age = age;
+           obj.sayHello = function(){
+               alert("汪汪");
+           }
+           return obj;
+       }
+
+       /*
+            使用工厂方法创建的对象，使用的构造函数都是Object
+                所以创建的对象都是Object这个类型
+                就导致我们无法区分出多种不同类型的对象
+       */
+       var dog = createDog("旺财",3);
+       dog.sayHello();
     </script>
 </head>
 <body>
