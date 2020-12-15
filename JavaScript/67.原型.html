@@ -36,7 +36,7 @@
                     自身如果有，则直接使用，
                     如果没有则取原型对象中寻找，如果原型对象中有，则使用，
                     如果没有则取原型的原型中寻找,直到找到Object对象的原型，
-                    Object对象的原型没有原型，如果在Object中依然没有找到，则返回undefined
+                    Object对象的原型没有原型，如果在Object原型中依然没有找到，则返回undefined
       */
       console.log(mc.__proto__.hasOwnProperty("hasOwnProperty"));//false
 
