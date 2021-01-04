@@ -35,15 +35,39 @@
 
             //获取box1
             var box1 = document.getElementById("box1");
-            //为box1绑定一个鼠标按下事件
-            //当鼠标在被拖拽元素上按下时，开始拖拽 onmousedown
-            box1.onmousedown = function(event){
+            var box2 = document.getElementById("box2");
+
+            //开启box1的拖拽
+            drag(box1);
+
+            drag(box2);
+
+            /*
+                提取一个专门用来设置拖拽的函数
+
+            */
+           function drag(obj){
+                //为box1绑定一个鼠标按下事件
+                //当鼠标在被拖拽元素上按下时，开始拖拽 onmousedown
+                obj.onmousedown = function(event){
+
+                //设置box1捕获所有鼠标按下的事件
+                /*
+                    setCapture()
+                    - 只有IE支持，但是在火狐中调用时不会报错，
+                        而如果使用Chrome调用，会报错
+                */
+                //    if(box1.setCapture){
+                //     box1.setCapture();
+                //    }
+                obj.setCapture && obj.setCapture();
+
                 event = event || window.event;
                 //div的偏移量 鼠标.clientX - 元素.offsetLeft
                 //div的偏移量 鼠标.clientY - 元素.offsetTop
-                var ol = event.clientX - box1.offsetLeft;
-                var ot = event.clientY - box1.offsetTop;
-                
+                var ol = event.clientX - obj.offsetLeft;
+                var ot = event.clientY - obj.offsetTop;
+
                 //为document绑定一个 onmousemove事件
                 document.onmousemove = function(event){
                     event = event || window.event;
@@ -53,8 +77,8 @@
                     var top = event.clientY - ot;
 
                     //修改box1的位置
-                    box1.style.left = left + "px";
-                    box1.style.top = top + "px";
+                    obj.style.left = left + "px";
+                    obj.style.top = top + "px";
                 };
 
                 //为document绑定一个鼠标松开事件
@@ -66,6 +90,9 @@
                     //取消document的onmouseup事件
                     document.onmouseup = null;
 
+                    //当鼠标松开时，取消对事件的捕获
+                    obj.releaseCapture && obj.releaseCapture();
+
                 };
 
                 /*
@@ -76,7 +103,8 @@
                     但是这招对IE8不起作用
                 */
                 return false;
-            }
+                };
+           }
         }
     </script>
 </head>
