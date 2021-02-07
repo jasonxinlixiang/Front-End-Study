@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>京东左侧导航</title>
     <link rel="stylesheet" href="./css/reset.css">
     <style>
-
         /* 设置body */
-        body{
+        body {
             /* 设置一个网页的背景颜色，方便查看 */
             background-color: #bfa;
         }
+
         /* 设置菜单外部容器 */
-        .left-nav{
+        .left-nav {
             /* 设置宽度 */
             width: 190px;
             /* 设置高度 */
@@ -26,7 +27,7 @@
             margin: 50px auto;
         }
 
-        .left-nav .item{
+        .left-nav .item {
             height: 25px;
             /* 要让一个文字在父元素中垂直居中，只需将父元素的line-height设置为一个和父元素的height一样 */
             line-height: 25px;
@@ -37,12 +38,12 @@
         }
 
         /* 为item设置一个鼠标移入的状态 */
-        .item:hover{
+        .item:hover {
             background-color: #d9d9d9;
         }
 
         /* 设置超链接的样式 */
-        .item a{
+        .item a {
             /* 设置字体大小 */
             font-size: 14px;
             /* 设置字体的颜色 */
@@ -51,11 +52,12 @@
             text-decoration: none;
         }
 
-        .item a:hover{
+        .item a:hover {
             color: red;
         }
     </style>
 </head>
+
 <body>
     <!-- 创建一个外部的容器 nav(div) div(div) ul(li) -->
     <nav class="left-nav">
@@ -74,7 +76,7 @@
         <div class="item">
             <a href="">男装</a>/<a href="">女装</a>/<a href="">童装</a>/<a href="">内衣</a>
         </div>
-        <div class="item"> 
+        <div class="item">
             <a href="">美妆</a>/<a href="">个护清洁</a>/<a href="">宠物</a>
         </div>
         <div class="item">
@@ -82,4 +84,5 @@
         </div>
     </nav>
 </body>
+
 </html>
