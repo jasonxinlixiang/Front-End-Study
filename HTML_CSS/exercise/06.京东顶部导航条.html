@@ -27,6 +27,7 @@
             width: 100%;
             /* 设置背景颜色 */
             background-color: #E3E4E5;
+            height: 30px;
             /* 设置行高，没有设置高度 使文字垂直居中 */
             line-height: 30px;
             /* 设置下边框 */
@@ -39,6 +40,8 @@
             width: 1190px;
             /* 设置水平居中 */
             margin: 0 auto;
+
+            position: relative;
         }
 
         /* 设置字体样式 */
@@ -62,6 +65,43 @@
         /* 设置location下的小图标 */
         .location .fas{
             color: #f10125;
+        }
+
+        .location .city-list{
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            /* 设置绝对定位，使其不占据页面的位置 */
+            position: absolute;
+            top: 31px;
+            z-index: 999;
+            box-shadow: 0 2px 2px rgba(0, 0, 0,.2);
+        }
+
+        /* 当鼠标移入到location时，让city-list显示 */
+        .location:hover .city-list{
+            display: block;
+        }
+
+        .current-city{
+            padding: 0 10px;
+
+            border: 1px solid transparent;
+            border-bottom: none;
+
+            position: relative;
+
+            z-index: 9999;
+        }
+
+        /* 设置current-city的移入的效果 */
+        .location:hover .current-city{
+            background-color: white;
+            border: 1px solid rgb(204,204,204);
+            border-bottom: none;
+            padding-bottom: 1px;
         }
 
         /* 设置shortcut */
@@ -93,6 +133,11 @@
                 <div class="current-city">
                     <i class="fas fa-map-marker-alt"></i>
                     <a href="javascript:;">北京</a>
+                </div>
+
+                <!-- 放置城市列表的div -->
+                <div class="city-list">
+                    
                 </div>
             </div>
             <!-- 右侧的菜单 -->
