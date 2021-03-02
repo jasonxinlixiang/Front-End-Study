@@ -58,21 +58,32 @@
     right: 0;
     margin: auto;
 }
-.app-wrapper:hover>.app .qrcode{
+
+.app:hover .qrcode,
+.app:hover::after{
     display: block;
+    height: 148px;
 }
+
+/* .app-wrapper:hover>.app .qrcode{
+    display: block;
+} */
 /* 设置app的下拉 */
 .app .qrcode{
-    display: none;
+    /* display: none; */
     position: absolute;
     left: -40px;
     width: 124px;
-    height: 148px;
-    
+    /* height: 148px; */
+    height: 0;
+    overflow: hidden;
     line-height: 1;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    /* transition: 用于为样式设置过度效果 */
+    transition: height 0.3s;
 }
 
 /* 设置二维码图片 */
