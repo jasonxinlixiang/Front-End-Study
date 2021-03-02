@@ -128,7 +128,6 @@
 /* 设置中间的header */
 .header{
     height: 100px;
-    background-color: #bfa;
     
 }
 
@@ -169,4 +168,37 @@
 
 .header .logo:hover .home{
     left: 0;
+}
+
+/* 设置中间的导航条 */
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+}
+
+/* 设置导航条 */
+.header .nav{
+    height: 100px;
+    line-height: 100px;
+    padding-left: 58px;
+}
+
+/* 设置导航条中的li */
+.nav-wrapper li{
+    float: left;
+}
+
+.nav-wrapper li a{
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.nav-wrapper li a:hover{
+    color: #FF6700;
+}
+
+/* 隐藏全部商品 */
+.all-goods{
+    visibility: hidden;
 }
