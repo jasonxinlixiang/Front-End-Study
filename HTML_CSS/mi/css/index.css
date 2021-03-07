@@ -84,6 +84,7 @@
 
     /* transition: 用于为样式设置过度效果 */
     transition: height 0.3s;
+    z-index: 9999;
 }
 
 /* 设置二维码图片 */
